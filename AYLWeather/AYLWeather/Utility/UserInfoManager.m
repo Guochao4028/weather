@@ -41,7 +41,6 @@ static UserInfoManager *_instance;
     CLLocationCoordinate2D coordinate = self.userLocation.coordinate;
     NSString *str = [NSString stringWithFormat:@"%f,%f",coordinate.longitude, coordinate.latitude];
     
-    
     [_geoCoder reverseGeocodeLocation:self.userLocation completionHandler:^(NSArray *placemarks, NSError *error){
             //获取到反编码对象
             CLPlacemark *pm = [placemarks firstObject];
